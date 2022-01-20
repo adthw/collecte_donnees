@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %} 
+							<!-- Content -->
+								<section>
+									<header class="main">
+									</header>
+									
+							<!-- Content -->
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<h1>Formulaire de don</h1>
+											<h2 id="content">Utilisation des dons</h2>
+											<p>Praesent ac adipiscing ullamcorper semper ut amet ac risus. Lorem sapien ut odio odio nunc. Ac adipiscing nibh porttitor erat risus justo adipiscing adipiscing amet placerat accumsan. Vis. Faucibus odio magna tempus adipiscing a non. In mi primis arcu ut non accumsan vivamus ac blandit adipiscing adipiscing arcu metus praesent turpis eu ac lacinia nunc ac commodo gravida adipiscing eget accumsan ac nunc adipiscing adipiscing lorem ipsum dolor sit amet nullam veroeros adipiscing.</p>
+											<h3>Réduction d'impôts</h3>
+												<p>Les dons ouvrent droit à une réduction d'impôt sur le revenu égale à 66 % du montant versé dans la limite de 20 % du revenu imposable</p>
+										</div>
+										<div class="col-6 col-12-small">
+											<!-- Form -->
+													
+													
+													<form method="POST" action="{{ url_for('merci')}}">
+														<div class="row gtr-uniform">
+															<div class="col-6 col-12-xsmall">
+																<input type="text" name="nom" id="demo-name" value="" placeholder="Nom" />
+															</div>
+															<div class="col-6 col-12-xsmall">
+																<input type="text" name="prenom" id="prenom" value="" placeholder="prénom" />
+															</div>
+															<div class="col-12 col-12-xsmall">
+																<input type="email" name="mail" id="demo-email" value="" placeholder="E-mail" />
+															</div>
+															<!-- Break -->
+															<div class="col-12">
+																<p>Chaque donateur ayant droit de regard sur l'utilisation des moyens financiers, choisissez le type
+																	d'adhésion qui sera automatiquement créé :</var></p>
+																<select name="adhesion" id="demo-category">
+																	<option value="1">- Adhésion -</option>
+																	<option value="2">Membre Actif</option>
+																	<option value="3">Membre bienfaiteur</option>
+																	<option value="4">Administration</option>
+																</select>
+															</div>
+															<!-- Break -->
+															<div class="row gtr-uniform">
+																<div class="col-6 col-12-xsmall">
+																	<p><b>Merci d'indiquez ici le montant</b></p>
+																</div>	
+																<div class="col-6 col-12-xsmall">
+																	<input type="text" name="montant_don" id="demo-montant" value="" placeholder="€"  required='required'/>
+																</div>
+															</div>		
+															<!-- Break -->
+															<div class="col-6 col-12-small">
+																<input type="checkbox"  name="copie_mail" id="demo-copy" required='required'>
+																<label for="demo-copy">J'ai pris connaissance des conditions générales</label>
+															</div>
+															<div class="col-6 col-12-small">
+																<input type="checkbox" id="demo-human" name="human">
+																<label for="demo-human">I am a human</label>
+															</div>
+															<!-- Break -->
+															<div class="col-12">
+																<ul class="actions">
+																	<li><input type="submit" value="Envoyer" class="primary" onclick="this.value='Merci!'" /></li>
+																	<li><input type="reset" value="Effacer" /></li>
+																</ul>
+															</div>
+														</div>
+													</form>
+										</div>
+{% endblock %}

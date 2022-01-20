@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %} 
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Merci !</h1>
+											<p>Grâce à vous l'association va poursuivre ses missions dans de meilleures conditions!</p>
+										</header>
+										<p>Vous allez recevoir prochainement votre carte d'adhérent.</p>
+										<p>Et pensez à promouvoir nos actions sur les réseaux sociaux</p>
+                                        <div>
+                                            <ul class="icons">
+                                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                                <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+                                                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                                <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+                                            </ul>
+                                        </div>
+									</div>
+									<div class="image object">
+								<!-- {% for donateur in donateurs if donateurs [2] %} 								
+								<blockquote> <h1>{{ donateur['nom'] }} <span class="col-12-small">{{ donateur['prenom'] }}</span></h1> 
+									pour votre généreux don de <span class="badge badge-primary">{{ donateur['montant_don'] }}</span>  
+								</blockquote>
+								{% endfor %}  -->
+
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Nom</th>
+												<th>Prénom</th>
+												<th>Don à l'asso</th>
+											</tr>
+										</thead>
+										<tbody>
+											{% for donateur in donateurs %} 																		 
+											<tr>
+												<td><h3>{{ donateur['nom'] }}</h3></td>
+												<td><h4>{{ donateur['prenom'] }}</h4></td>
+												<td><span class="badge badge-primary">{{ donateur['montant_don'] }}</span> </td>
+											</tr>
+											
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="2">
+													<p>Les dons ouvrent droit à une réduction d'impôt sur le revenu égale à 66 % du montant versé dans la limite de 20 % du revenu imposable</p>
+													<H4>Votre réduction d'impôts est égale à <b>{{ donateur['montant_don']*66/100 }} &#x20BF;</b></H4>
+													<i>Merci pour votre don, vous apparaissez maintenant sur la <a href="{{ url_for('index')}}" class="logo">page d'Acueil</a> !</i></td>
+												<td></td>
+											</tr>
+										{% endfor %}
+										</tfoot>
+									</table>
+								</div>
+
+
+
+
+							</div>
+								</section>
+
+						
+{% endblock %}
