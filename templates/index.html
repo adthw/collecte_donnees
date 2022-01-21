@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block content %} 
+						
+                            <!-- Banner -->
+                            <section id="banner">
+                                <div class="content">
+                                    <header>
+                                        <h1>Faites un don à <br />
+                                            l'association</h1>
+                                        <p>Les dons ouvrent droit à une réduction d'impôt sur le revenu égale à 66 % du montant versé dans la limite de 20 % du revenu imposable</p>
+                                    </header>
+                                    <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+                                    <ul class="actions">
+                                        <li><a href="{{ url_for('form_don')}}" class="button big">Je fais un don</a></li>
+                                    </ul>
+                                </div>
+                                <span class="image object">
+                                    <!-- <img src="{{ url_for('static', filename='images/pic10.jpg') }}" alt="" /> -->
+                                    <div class="table-wrapper">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Nom</th>
+                                                    <th>Prénom</th>
+                                                    <th>Don à l'asso</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for donateur in donateurs %} 																		 
+                                                <tr>
+                                                    <td><h3>{{ donateur['nom'] }}</h3></td>
+                                                    <td><h4>{{ donateur['prenom'] }}</h4></td>
+                                                    <td><span class="badge badge-primary">########</span> </td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="2"></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </span>
+                            </section>
+
+                        <!-- Section -->
+                            <section>
+                                <header class="major" id="association">
+                                    <h2>L'association</h2>
+                                </header>
+                                <div class="features">
+                                    <article>
+                                        <span class="icon solid fa-paper-plane"></span>
+                                        <div class="content">
+                                            <h3><a href="#">la raison d'être de l'association</a></h3>
+                                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <span class="icon solid fa-rocket"></span>
+                                        <div class="content">
+                                            <h3><a href="#">Historique</a></h3>
+                                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <span class="icon solid fa-signal"><a href="#"></a></span>
+                                        <div class="content">
+                                            <h3><a href="#">Chiffres clefs</a></h3>
+                                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <span class="icon solid fa-gem"></span>
+                                        <div class="content">
+                                            <h3><a href="#">Comment sera utilisée votre contribution ?</a></h3>
+                                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </section>
+{% endblock %}	

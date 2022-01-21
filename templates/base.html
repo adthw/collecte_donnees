@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>L'association</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css')}}" />
+		<script>
+			if ( window.history.replaceState ) {
+				window.history.replaceState( null, null, window.location.href );
+			}
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="{{ url_for('index')}}" class="logo"><strong>Notre association a besoin de</strong> VOUS</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+{% block content %} 
+{% endblock %}
+
+							
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{{ url_for('index')}}"> Accueil</a></li>
+										<li>
+											<span class="opener">L'association</span>
+											<ul>
+												<li><a href="#association">raison d'être</a></li>
+												<li><a href="#association">historique</a></li>
+												<li><a href="#association">chiffres clefs</a></li>
+												<li><a href="#association">votre contribution</a></li>
+												<li><a href="{{ url_for('admin')}}">Connexion</a></li>
+											</ul>
+										</li>								
+											
+								</ul>
+								<div><a href="{{ url_for('form_don')}}" class="button primary fit big">Je fais un don</a></div>
+								</nav>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Contacts de l'association</h2>
+									</header>
+									<ul class="contact open">
+										<li class="icon solid fa-envelope"><a href="#">information@asso.fr</a></li>
+										<li class="icon solid fa-phone">(000) 000-0000</li>
+										<li class="icon solid fa-home">55 quai iA - Brest Cedex<br /></li>
+									</ul>
+								</section>
+
+						<!-- Footer -->
+						<footer id="footer">
+							<h2>Crédits</h2>
+							<ul>
+							<li class="copyright">&copy; Design: <a href="https://html5up.net">HTML5 UP</a>.</li>
+							<li class="copyrigth">&copy; Demo Images: <a href="https://unsplash.com">Unsplash</a></li>
+							<li class="copyrigth">&copy; Icons: <a href="https://www.fontawesome.io">Font Awesome</a></li>
+							<li class="copyrigth">&copy; Other: <a href="https://www.jquery.com">jQuery</a></li>
+							<li class="copyrigth">&copy; Responsive Tools: <a href="https://www.github.com/ajlkn/responsive-tools"> ajkln sur github</a></li>
+							</ul>
+						</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>
